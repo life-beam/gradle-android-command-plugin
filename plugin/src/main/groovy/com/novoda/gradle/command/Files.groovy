@@ -28,7 +28,7 @@ class Files extends AdbTask {
         shell('ls -la', dir)
     }
 
-    private String shell(... values) {
+    String shell(... values) {
         def params = ['shell'] + (values as List)
         adb(*params)
     }
